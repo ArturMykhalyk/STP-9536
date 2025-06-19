@@ -1,9 +1,7 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+/*import fons*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Balsamiq+Sans&family=Comic+Neue:wght@400;700&family=Nunito&display=swap');
+@import 'modern-normalize/modern-normalize.css';
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -12,7 +10,17 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./hero.css');
+@import url('./about.css');
+@import url('./features.css');
+@import url('./how-to-play.css');
+@import url('./levels.css');
+@import url('./boosters.css');
+@import url('./secret.css');
+@import url('./rewards.css');
+@import url('./immersive.css');
+@import url('./information.css');
+@import url('./faq.css');
+@import url('./contact.css');
 @import url('./footer.css');
+@import url('./modal-cookies.css');
