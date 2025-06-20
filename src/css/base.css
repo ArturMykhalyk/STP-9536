@@ -11,6 +11,7 @@ html {
   background-image: conic-gradient(from 0deg at 100% 50%,
       #007AFF 0%,
       #000000 100%);
+  scroll-behavior: smooth;
 }
 
 button {
