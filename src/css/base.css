@@ -6,8 +6,9 @@ body {
 }
 
 html {
-
-  background: conic-gradient(from 0deg at 100% 50%,
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: conic-gradient(from 0deg at 100% 50%,
       #007AFF 0%,
       #000000 100%);
 }
@@ -46,5 +47,18 @@ a {
 
   &:focus {
     color: #fc0;
+  }
+}
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
