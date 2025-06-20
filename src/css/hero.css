@@ -36,7 +36,8 @@
     line-height: 1.56;
     text-transform: uppercase;
     color: #fc0;
-    filter: url(#inset-shadow);
+    -webkit-text-stroke: 2px #c00f0c;
+    text-shadow: 1px 5px 10px #c00f0c;
 }
 
 
