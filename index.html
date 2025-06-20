@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/STP-9536/favicon.svg" />
+    <link rel="icon" type="image/webp" href="/STP-9536/favicon.webp" />
 
     <title>Crystal Temple – Match 3 Puzzle Adventure</title>
     <meta
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script type="module" crossorigin src="/STP-9536/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/STP-9536/assets/styles-D3WB6ZPU.css">
+    <link rel="stylesheet" crossorigin href="/STP-9536/assets/styles-CDlSTl0f.css">
   </head>
   <body>
     <header class="header">
@@ -82,10 +82,43 @@
 
     <main>
       <section class="hero">
-  <div class="container">
-    <p>hero</p>
+  <div class="container hero-container">
+    <div class="wrapper"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to Crystal Temple!</h1>
+
+      <p class="hero-descr-first">
+        Uncover Mysteries. Match Crystals. Claim the Temple's Secrets.
+      </p>
+      <p class="hero-descr-second">
+        Step inside the ancient Crystal Temple, where forgotten magic, glowing
+        gems, and puzzling chambers await the brave. This is not just another
+        match-3 game—it's an expedition into a world of mystery and strategy,
+        packed with dazzling levels, hidden relics, and sacred chambers.
+        <span>
+          Dare to enter and see if you can solve the temple's ancient puzzles.
+        </span>
+      </p>
+
+      <a
+        class="hero-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://play.google.com/store/apps/details?id=com.RVEntertainment.CrystalTemple&hl=en&gl=us"
+      >
+        <img
+          src="data:image/webp;base64,UklGRtICAABXRUJQVlA4WAoAAAAQAAAAMAAANgAAQUxQSM8AAAANcJZte5V8EYiwCF+EkUBJwEwAJBhLAGswEkADMYFr4CLQwDOH17O/IkKB2zbK6Bhz9wl6jEaZlOStw4lor+M4kwaW2d6voqMiQETRiK6rziIyGY1qvmoAg3jqIrVMPIFVtN4EdEZpZwitZYpDS3C0NI62f8AaaYMY9FdAG8NNVARXpu9IA943YBlsB/bOgHO+QI8yPdhtDc7tcjjCIxqhe/JFSvQi5vDs7++5FxnM/skRKlqqvYS/vyaFI3TMI1tAIUw0oxGGhJUgX4M+DwEAVlA4INwBAABwDACdASoxADcAPok4lkelI6IhM/TdUKARCWwAwrQThMfKcVzuF3kyhvoB5AO0B5gH6P9LzzAedn/K/Tm9QD+l+jf6iHoAdJZ+1/7Ce0ADXjLsGa61GK9B+aSei3ABXyt0q8NIGS/bLjh8fnAA/r09uVfGbUl3MQxFJfq4bsc0JV8X/2LpBwHrycelVDWaYe8Lgf/wQTRpdL14y/9g6MKP818HLMN44IqqU+C/XcXTo1ZpjPGZqOOy+fuSn/iuXfiKqG++fwFpQgofCAU4yYArHAHF/L2QNyfY1oD0VZ/oKJP6qpX7AayZZLWl68Z4QfO0bF/H21YNLeJjQK4tjb03TQAobe99AdxqtjnNiq8F3NW3k5+2XX0MEx12YQYTqWJI6TQMZTJgLu2xxlQtRMqhJ+xJsuJHoGeYfE2+7c4fPzUwfoYoBw6snQHC0xssipzDgjevoTJNfOrDMNMBFOgMEJ7S1nZ8EBIsrV6fs6q2rCStrJS7F6L7mtCMTvJV3UbMXoJ7pwcBdE0BsuAJLJvMeraxDMc0WBxVCxtuoKO8zPBMyh+qnZD9/BQ8NeFzLuj+P//b9pYXv//qVpU3/4D85//vZWlggUdKpVxywZ83a2El4tB+B8UAAAAAAA=="
+          width="24"
+          height="24"
+          alt="play-market"
+        />
+
+        Google Play</a
+      >
+    </div>
   </div>
 </section>
+
 
       <section class="about">
   <div class="container">
@@ -164,5 +197,21 @@
 
 
     
+    <svg width="0" height="0">
+  <filter id="inset-shadow">
+    <feOffset dx="4" dy="5" />
+    <feGaussianBlur stdDeviation="3" result="offset-blur" />
+    <feComposite
+      operator="out"
+      in="SourceGraphic"
+      in2="offset-blur"
+      result="inverse"
+    />
+    <feFlood flood-color="#c00f0c" result="color" />
+    <feComposite operator="in" in="color" in2="inverse" result="inset-shadow" />
+    <feComposite operator="over" in="inset-shadow" in2="SourceGraphic" />
+  </filter>
+</svg>
+
   </body>
 </html>
