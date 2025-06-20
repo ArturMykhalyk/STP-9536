@@ -1,0 +1,84 @@
+/* Styles for Mobile devices */
+.rewards{
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.rewards-title{
+    margin-bottom: 20px;
+    color: #FFCC00;
+    text-shadow: 0 2px 6px #C00F0C;
+    font-family: "Alfa Slab One", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.rewards-text{
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.rewards-list{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 12px;
+    margin-bottom: 16px;
+
+}
+
+.rewards-item{
+    width: 138px;
+    text-align: center;
+    border: 5px solid #32ADE6;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.rewards-item-text{
+    color: rgb(255, 204, 0);
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: left;
+    text-shadow: inset 0px 1px 2px 0px #C00F0C;
+    padding: 0 12px 12px;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+.rewards{
+    margin-bottom: 100px;
+}
+
+.rewards-title{
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.rewards-text{
+    font-size: 20px;
+    line-height: 1.09;
+    margin-bottom: 20px;
+}
+
+.rewards-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.rewards-item{
+    width: 245px;
+}
+
+.rewards-item-text{
+    font-size: 32px;
+    line-height: 1;
+    padding: 12px;
+}
+}
