@@ -39,6 +39,7 @@ button {
 section {
   padding-top: 20px;
   padding-bottom: 20px;
+  scroll-margin-top: 40px;
 }
 
 /* Styles for Desktop devices */
@@ -46,5 +47,6 @@ section {
   section {
     padding-top: 50px;
     padding-bottom: 50px;
+    scroll-margin-top: 99px;
   }
 }
