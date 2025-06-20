@@ -31,23 +31,16 @@ button {
   border-radius: 20px;
   background: #ebedf0;
 
-  &:hover {
-    box-shadow: 0 4px 6px 2px #007aff;
-  }
-
-  &:focus {
-    background: #32ade6;
-  }
 }
 
-a {
-  &:hover {
-    text-shadow: 0 4px 4px 0 #e5a000;
-  }
+a:focus {
+  color: #fc0;
+  outline: none;
+}
 
-  &:focus {
-    color: #fc0;
-  }
+
+a:hover {
+  text-shadow: 0 4px 4px #e5a000;
 }
 
 section {

@@ -1,17 +1,16 @@
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Go home icon -->
-    <symbol id="icon_go_home" viewBox="0 0 32 32">
-<path d="M20.121 6.125l-10.195 8.736c-0.164 0.141-0.296 0.316-0.386 0.512s-0.137 0.41-0.137 0.627c0 0.216 0.047 0.43 0.137 0.627s0.222 0.371 0.386 0.512l10.195 8.736c0.973 0.834 2.476 0.142 2.476-1.139v-17.475c0-1.281-1.503-1.973-2.476-1.136z"></path>
-</symbol>
-
-    <!-- Меню закрити-->
-    <symbol id="icon_close_btn" viewBox="0 0 32 32">
-<path d="M8.533 25.333l-1.867-1.867 7.467-7.467-7.467-7.467 1.867-1.867 7.467 7.467 7.467-7.467 1.867 1.867-7.467 7.467 7.467 7.467-1.867 1.867-7.467-7.467-7.467 7.467z"></path>
-</symbol>
-
-    <!-- Меню бургер-->
-    <symbol id="icon_menu_burger" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4" d="M4 8.001h24M4 16.001h24M4 24.001h24"></path>
-</symbol>
-
+    <defs>
+        <!-- Go home icon -->
+        <symbol id="icon_go_home" viewBox="0 0 32 32">
+            <path d="M20.121 6.125l-10.195 8.736c-0.164 0.141-0.296 0.316-0.386 0.512s-0.137 0.41-0.137 0.627c0 0.216 0.047 0.43 0.137 0.627s0.222 0.371 0.386 0.512l10.195 8.736c0.973 0.834 2.476 0.142 2.476-1.139v-17.475c0-1.281-1.503-1.973-2.476-1.136z"></path>
+        </symbol>
+        <!-- Меню закрити-->
+        <symbol id="icon_close_btn" viewBox="0 0 32 32">
+            <path d="M8.533 25.333l-1.867-1.867 7.467-7.467-7.467-7.467 1.867-1.867 7.467 7.467 7.467-7.467 1.867 1.867-7.467 7.467 7.467 7.467-1.867 1.867-7.467-7.467-7.467 7.467z"></path>
+        </symbol>
+        <!-- Меню бургер-->
+        <symbol id="icon_menu_burger" viewBox="0 0 32 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4" d="M4 8.001h24M4 16.001h24M4 24.001h24"></path>
+        </symbol>
+    </defs>
+</svg>
