@@ -1,0 +1,125 @@
+.play-title {
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.56;
+    text-transform: uppercase;
+    color: #fc0;
+    filter: url(#inset-shadow);
+    margin-bottom: 20px;
+}
+
+.play-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.play-item {
+
+    border: 5px solid #32ade6;
+    border-radius: 20px;
+    padding: 11px;
+    width: 288px;
+
+    display: flex;
+    gap: 16px;
+
+}
+
+
+
+.play-item-photo {
+    border-radius: 10px;
+}
+
+.play-item-content {
+    width: 190px;
+
+}
+
+.play-item-title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.play-item-descr-first {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.play-item-descr-second {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    border-radius: 5px;
+    padding: 2px 4px;
+    display: inline-block;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.play-game-descr {
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+    .play-title {
+        font-size: 36px;
+        line-height: 0.56;
+
+        margin-bottom: 40px;
+    }
+
+    .play-list {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .play-item {
+        width: 1056px;
+    }
+
+
+
+    .play-item-photo {
+        border-radius: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .play-item-content {
+        width: 908px;
+
+    }
+
+    .play-item-title {
+        font-size: 24px;
+        line-height: 1.17;
+        margin-bottom: 8px;
+    }
+
+    .play-item-descr-first {
+        font-size: 24px;
+        line-height: 1.17;
+        margin-bottom: 8px;
+    }
+
+    .play-item-descr-second {
+        font-size: 16px;
+        line-height: 1;
+
+
+    }
+
+    .play-game-descr {
+        font-size: 20px;
+        line-height: 1;
+    }
+}
