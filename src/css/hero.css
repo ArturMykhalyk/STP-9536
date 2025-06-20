@@ -1,0 +1,141 @@
+.hero {
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+
+
+
+
+.wrapper {
+    z-index: auto;
+    width: 288px;
+    height: 285px;
+    position: relative;
+    margin-bottom: 40px;
+    background: url('/img/mobile/hero_mob.webp') no-repeat center center/cover;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .wrapper {
+        background: url('/img/mobile/hero_mob@2x.webp') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hero-title {
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.56;
+    text-transform: uppercase;
+    color: #fc0;
+    filter: url(#inset-shadow);
+}
+
+
+
+.hero-descr-first {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero-descr-second {
+    font-size: 16px;
+    line-height: 1.25;
+
+}
+
+.hero-descr-second span {
+    display: block;
+    margin-top: 30px;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    color: #000;
+    border: 5px solid #32ade6;
+    border-radius: 20px;
+    padding: 20px 40px;
+    width: 270px;
+    height: 70px;
+    background: #ebedf0;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 6px 2px #007aff;
+    }
+
+    &:focus {
+        color: #fff;
+        background: #32ade6;
+    }
+}
+
+
+
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+    .hero {
+        margin-top: 99px;
+    }
+
+    .hero-container {
+        display: flex;
+        gap: 5px;
+    }
+
+    .wrapper {
+        width: 629px;
+        height: 590px;
+        margin-bottom: 0;
+        background: url('/img/hero.webp') no-repeat center center/cover;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .wrapper {
+            background: url('/img/hero@2x.webp') no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    .hero-content {
+        margin: 0;
+        width: 427px;
+        height: 547px;
+        gap: 20px;
+        padding-top: 43px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        line-height: 1.04;
+    }
+
+    .hero-descr-first {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .hero-descr-second {
+        font-size: 20px;
+        line-height: 1;
+
+    }
+
+    .hero-descr-second span {
+
+        margin-top: 20px;
+    }
+
+}

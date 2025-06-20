@@ -146,6 +146,16 @@
     line-height: 1.25;
 }
 
+.link-menu:focus {
+    color: #fc0;
+    outline: none;
+}
+
+
+.link-menu:hover {
+    text-shadow: 0 4px 4px #e5a000;
+}
+
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
 

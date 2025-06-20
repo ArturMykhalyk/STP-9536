@@ -4,6 +4,7 @@ const burgerMenuEl = document.querySelector('[data-visible]');
 
 openBtnEl.addEventListener('click', e => {
   burgerMenuEl.dataset.visible = 'open';
+
   burgerMenuEl.addEventListener('click', handleCloseMenu);
   document.body.style.overflow = 'hidden';
   setTimeout(() => {

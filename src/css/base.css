@@ -33,15 +33,7 @@ button {
 
 }
 
-a:focus {
-  color: #fc0;
-  outline: none;
-}
 
-
-a:hover {
-  text-shadow: 0 4px 4px #e5a000;
-}
 
 section {
   padding-top: 20px;
