@@ -1,0 +1,13 @@
+.boosters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.boosters-item {
+    border: 1px black solid;
+    min-width: 325px;
+    height: 40px;
+    max-width: 518px;
+    flex: 1 1 auto;
+}
