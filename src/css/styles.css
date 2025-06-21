@@ -11,6 +11,7 @@
 /* Sections style */
 @import url('./header.css');
 @import url('./hero.css');
+@import url('./stone-wrapper.css');
 @import url('./about.css');
 @import url('./features.css');
 @import url('./how-to-play.css');

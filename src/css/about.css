@@ -24,10 +24,7 @@
 @media only screen and (min-width: 1200px) {
     .about {
         padding-bottom: 110px;
-        background-image: url('../img/stone_one@2x.webp'), url('../img/stone_five@2x.webp');
-        background-repeat: no-repeat;
-        background-size: 90px;
-        background-position: top 40px left 50%, top 40px left 60%;
+
     }
 
     .about-title {
