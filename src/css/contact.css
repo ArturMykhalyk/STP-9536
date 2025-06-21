@@ -1,0 +1,130 @@
+.contact{
+    padding-bottom: 40px;
+}
+
+.contact-title {
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #fc0;
+    -webkit-text-stroke: 2px #c00f0c;
+    text-shadow: 1px 5px 10px #c00f0c;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-item {
+    position: relative;
+    padding-left: 24px;
+}
+
+.contact-item::before{
+    content: "";
+    position: absolute;
+    transform: translate(-24px, 5px);
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-item-second::before{
+    transform: translate(-24px, 5px);
+}
+
+.contact-item-first::before{
+    background-image: url(/img/email@2x.webp);
+}
+
+.contact-item-second::before{
+    background-image: url(/img/we_usually@2x.webp);
+}
+
+.contact-info {
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.contact-link,
+.contact-span{
+    font-style: normal;
+}
+
+.contact-link:focus {
+    color: #fc0;
+    outline: none;
+}
+
+.contact-link:hover {
+    text-shadow: 0 4px 4px #e5a000;
+}
+
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+.contact-title{
+    margin-bottom: 64px;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.contact-text {
+    font-size: 36px;
+    line-height: 1.3888;
+    margin-bottom: 17px;
+    position: relative;
+}
+
+.contact-text::before {
+    content: "";
+    position: absolute;
+    transform: translate(1014px, -21px);
+    width: 35px;
+    height: 35px;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/img/tempt@2x.webp);
+}
+
+
+.contact-item::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50px, 5px);
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-item-second::before{
+    transform: translate(-50px, 5px);
+}
+
+.contact-item {
+    height: 43px;
+    padding-left: 50px;
+}
+
+.contact-info{
+    font-size: 20px;
+    line-height: 2,5;
+
+}
+
+}
