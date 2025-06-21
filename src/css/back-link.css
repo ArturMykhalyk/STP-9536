@@ -1,0 +1,55 @@
+.back-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    text-align: center;
+    color: #f7f5f5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 15px;
+    width: 320px;
+    height: 38px;
+    margin-bottom: 40px;
+
+    &:hover {
+        transition: filter 0.3s ease;
+        filter: drop-shadow(0 2px 1px rgba(0, 122, 255, 0.7));
+    }
+
+    &:focus {
+        outline: none;
+        color: #007aff;
+        transition: color 0.3s ease;
+    }
+
+    &:focus .back-link-icon {
+        fill: #007aff;
+        transition: fill 0.3s ease;
+    }
+
+}
+
+.back-link-icon {
+    fill: #fff;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+    .back-link {
+        margin-top: 72px;
+        margin-bottom: 100px;
+        font-size: 24px;
+        line-height: 1.25;
+
+        &:hover {
+            transition: filter 0.3s ease;
+            filter: drop-shadow(-2px 5px 4px rgba(0, 122, 255, 0.7));
+        }
+    }
+
+    .back-link-icon {
+        width: 30px;
+        height: 30px;
+    }
+}

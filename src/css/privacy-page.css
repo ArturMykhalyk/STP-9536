@@ -1,0 +1,252 @@
+/*import fons*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Balsamiq+Sans&family=Comic+Neue:wght@400;700&family=Nunito&display=swap');
+@import 'modern-normalize/modern-normalize.css';
+
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./back-link.css');
+
+section {
+    padding: 10px 0;
+}
+
+.privacy-title {
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fc0;
+    -webkit-text-stroke: 2px #c00f0c;
+    text-shadow: 1px 5px 10px #c00f0c;
+    margin-bottom: 40px;
+}
+
+.privacy-descr {
+    font-size: 16px;
+    line-height: 1.875;
+    color: #f7f5f5;
+    margin-bottom: 20px;
+}
+
+.privacy-subtitle {
+    font-size: 24px;
+    line-height: 1.66667;
+    text-transform: uppercase;
+    color: #fc0;
+    margin-bottom: 15px;
+}
+
+.privacy-subtitle-sub {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #f7f5f5;
+    margin-bottom: 20px;
+}
+
+.privacy-descr-sub {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.5;
+    margin-bottom: 20px;
+}
+
+.privacy-list-title {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f7f5f5;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.privacy-purposes-list {
+    padding-left: 24px;
+    margin-bottom: 20px;
+}
+
+.privacy-purposes-item {
+    position: relative;
+}
+
+.privacy-purposes-item::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: -11px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #f7f5f5;
+}
+
+.privacy-purposes-item-descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    color: #f7f5f5;
+}
+
+.descr-list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f7f5f5;
+    margin-bottom: 15px;
+}
+
+.privacy-subtitle-sub-low {
+    font-size: 16px;
+}
+
+.cookies-list {
+    margin-bottom: 20px;
+}
+
+.cookies-item {
+    position: relative;
+}
+
+.cookies-item::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #f7f5f5;
+}
+
+.cookies-item-descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    color: #f7f5f5;
+}
+
+.cookies-item-descr span {
+    display: block;
+    padding-left: 24px;
+}
+
+.contact-us-priv {
+    padding-bottom: 70px;
+}
+
+.descr-list span {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+
+    section {
+        padding: 10px 0;
+    }
+
+    .privacy-title {
+        font-size: 36px;
+    }
+
+    .privacy-descr {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .privacy-subtitle {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .privacy-subtitle-sub {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .privacy-descr-sub {
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .privacy-list-title {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .privacy-purposes-list {
+        padding-left: 24px;
+        margin-bottom: 20px;
+    }
+
+    .privacy-purposes-item {
+        position: relative;
+    }
+
+    .privacy-purposes-item::before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: -11px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #f7f5f5;
+    }
+
+    .privacy-purposes-item-descr {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .descr-list {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+
+
+    .cookies-list {
+        margin-bottom: 20px;
+    }
+
+    .cookies-item {
+        position: relative;
+    }
+
+    .cookies-item::before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: 5px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #f7f5f5;
+    }
+
+    .cookies-item-descr {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .cookies-item-descr span {
+        display: block;
+        padding-left: 24px;
+    }
+
+    .contact-us-priv {
+        padding-bottom: 70px;
+    }
+
+    .privacy-subtitle-sub-low-desk {
+        font-size: 20px;
+    }
+
+    .descr-list span {
+        margin-top: 0;
+    }
+
+}
