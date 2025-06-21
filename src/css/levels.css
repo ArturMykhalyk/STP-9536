@@ -1,0 +1,194 @@
+.levels-title {
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.56;
+    text-transform: uppercase;
+    color: #fc0;
+    -webkit-text-stroke: 2px #c00f0c;
+    text-shadow: 1px 5px 10px #c00f0c;
+    margin-bottom: 20px;
+}
+
+.levels-descr {
+    font-size: 16px;
+    line-height: 1.87;
+    margin-bottom: 15px;
+}
+
+.levels-block-list {
+    display: flex;
+    gap: 8px;
+}
+
+
+
+.levels-progress-title {
+    font-size: 16px;
+    line-height: 1.87;
+    margin-bottom: 20px;
+}
+
+.levels-progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.levels-progress-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 5px solid #32ade6;
+    border-radius: 10px;
+    padding: 5px 11px 5px 5px;
+    width: 135px;
+}
+
+.levels-progress-photo {
+    width: 16px;
+    height: 16px;
+}
+
+.levels-progress-descr {
+    width: 84px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.levels-unlockable-block {
+    border-left: #32ade6 5px solid;
+    padding-left: 2px;
+}
+
+.levels-unlockable-title {
+    font-size: 16px;
+    line-height: 1.875;
+}
+
+.levels-unlockable-list {
+    display: flex;
+    padding-left: 4px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.levels-unlockable-item {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    gap: 23px;
+}
+
+.levels-unlockable-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.levels-unlockable-photo {
+    width: 16px;
+    height: 16px;
+
+}
+
+.levels-unlockable-descr {
+    width: 69px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+    .levels-title {
+        font-size: 36px;
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+
+    .levels-descr {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .levels-block-list {
+        gap: 10px;
+    }
+
+
+
+    .levels-progress-title {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+
+
+    .levels-progress-item {
+
+        gap: 16px;
+
+        border-radius: 20px;
+        padding: 11px;
+        width: 517px;
+    }
+
+    .levels-progress-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .levels-progress-descr {
+        width: 419px;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    .levels-unlockable-block {
+        padding-left: 12px;
+    }
+
+    .levels-unlockable-title {
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .levels-unlockable-list {
+
+        padding-left: 0;
+
+        gap: 6px;
+    }
+
+    .levels-unlockable-item {
+        display: flex;
+        align-items: center;
+        height: 71px;
+        gap: 26px;
+    }
+
+    .levels-unlockable-wrapper {
+        width: 71px;
+        height: 71px;
+
+    }
+
+    .levels-unlockable-photo {
+        width: 32px;
+        height: 32px;
+
+    }
+
+    .levels-unlockable-descr {
+        width: 414px;
+        font-size: 24px;
+        line-height: 1.17;
+    }
+}
