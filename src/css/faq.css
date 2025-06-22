@@ -84,7 +84,7 @@
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
-.information-title{
+.faq-title{
     margin-bottom: 40px;
     font-size: 36px;
     line-height: 1;
