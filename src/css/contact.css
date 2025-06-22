@@ -25,6 +25,7 @@
     flex-direction: column;
     gap: 20px;
 }
+
 .contact-item {
     position: relative;
     padding-left: 24px;
@@ -72,7 +73,6 @@
     text-shadow: 0 4px 4px #e5a000;
 }
 
-
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
 .contact-title{
@@ -91,10 +91,10 @@
 .contact-text::before {
     content: "";
     position: absolute;
-    transform: translate(1014px, -21px);
-    width: 35px;
-    height: 35px;
-    background-size: 35px 35px;
+    transform: translate(1014px, -23px);
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(/img/tempt@2x.webp);
@@ -124,7 +124,5 @@
 .contact-info{
     font-size: 20px;
     line-height: 2,5;
-
 }
-
 }
