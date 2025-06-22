@@ -2,19 +2,21 @@
     .stone-wrapper-second {
         position: relative;
         background-image:
-            url('/img/stone_thirteen@2x.webp'),
-            url('/img/stone_fourteen@2x.webp'),
-            url('/img/stone_sixteen@2x.webp');
+            url('../img/stone_thirteen@2x.webp'),
+            url('../img/stone_fourteen@2x.webp'),
+            url('../img/stone_sixteen@2x.webp'),
+            url('../img/stone_seventeen@2x.webp');
         background-repeat: no-repeat;
         background-size:
             30px,
             80px,
-            30px;
+            30px,
+            120px;
         background-position:
             top 512px left calc(50% + 477px),
             top calc(50% - 102px) left calc(50% + 329px),
-
-            top calc(50%) left calc(50%);
+            top calc(50% + 316px) left calc(50% + 227px),
+            top calc(50% + 384px) left calc(50% - 33px);
     }
 
     .stone-wrapper-second::after {
@@ -25,12 +27,22 @@
         right: 0;
         bottom: 0;
 
-        background-image: url('/img/stone_fiveteen@2x.webp');
+        background-image: 
+            url('../img/stone_fiveteen@2x.webp'),
+            url('../img/stone_eighteen@2x.webp'),
+            url('../img/stone_nineteen@2x.webp');
         background-repeat: no-repeat;
-        background-size: 120px;
-        background-position: top calc(50% - 70px) left calc(50% + 451px);
+        background-size: 
+            120px,             
+            50px,
+            90px;
+        background-position: 
+            top calc(50% - 70px) left calc(50% + 451px),
+            top calc(50% + 356px) left calc(50% + 142px),
+            top calc(50% + 360px) left calc(50% + 351px);
         mix-blend-mode: lighten;
         pointer-events: none;
 
     }
 }
+
