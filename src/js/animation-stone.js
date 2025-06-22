@@ -2,14 +2,14 @@ const wrapper = document.querySelector('.stone-wrapper');
 let step = 0;
 
 function animateStones() {
-  step += 1;
+  step += 1.5;
 
   const positions = [
-    `top ${40 + Math.sin(step / 20) * 5}px left ${
+    `top ${40 + Math.sin(step / 20) * 10}px left ${
       50 + Math.cos(step / 25) * 1
     }%`,
     `top ${460 + Math.cos(step / 25) * 4}px left calc(50% + ${
-      151 + Math.sin(step / 30) * 5
+      151 + Math.sin(step / 30) * 30
     }px)`,
     `top ${370 + Math.sin(step / 23) * 6}px left calc(50% - ${
       129 + Math.cos(step / 28) * 4
@@ -26,10 +26,10 @@ function animateStones() {
     `top ${520 + Math.sin(step / 21) * 4}px left calc(50% + ${
       452 + Math.cos(step / 24) * 5
     }px)`,
-    `top ${630 + Math.cos(step / 24) * 5}px left calc(50% - ${
+    `top ${630 + Math.cos(step / 24) * 25}px left calc(50% - ${
       190 + Math.sin(step / 23) * 2
     }px)`,
-    `top ${690 + Math.sin(step / 18) * 3}px left calc(50% + ${
+    `top ${850 + Math.sin(step / 180) * 200}px left calc(50% + ${
       190 + Math.cos(step / 22) * 3
     }px)`,
     `top ${1135 + Math.cos(step / 20) * 6}px left calc(50% + ${
