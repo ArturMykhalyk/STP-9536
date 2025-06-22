@@ -1,20 +1,36 @@
 @media only screen and (min-width: 1200px) {
     .stone-wrapper-second {
+        position: relative;
         background-image:
             url('/img/stone_thirteen@2x.webp'),
             url('/img/stone_fourteen@2x.webp'),
-            url('/img/stone_fiveteen@2x.webp'),
             url('/img/stone_sixteen@2x.webp');
         background-repeat: no-repeat;
         background-size:
             30px,
             80px,
-            120px,
             30px;
         background-position:
             top 512px left calc(50% + 477px),
             top calc(50% - 102px) left calc(50% + 329px),
-            top calc(50% - 70px) left calc(50% + 451px),
+
             top calc(50%) left calc(50%);
+    }
+
+    .stone-wrapper-second::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-image: url('/img/stone_fiveteen@2x.webp');
+        background-repeat: no-repeat;
+        background-size: 120px;
+        background-position: top calc(50% - 70px) left calc(50% + 451px);
+        mix-blend-mode: lighten;
+        pointer-events: none;
+
     }
 }
