@@ -40,8 +40,28 @@ section {
   scroll-margin-top: 40px;
 }
 
+
+.base-title {
+  font-family: "Alfa Slab One", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #fc0;
+  -webkit-text-stroke: 1px #c00f0c;
+  text-shadow: 1px 5px 10px #c00f0c;
+  margin-bottom: 20px;
+}
+
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
+  .base-title {
+    font-size: 48px;
+    line-height: 1;
+    -webkit-text-stroke: 2px #c00f0c;
+    margin-bottom: 40px;
+  }
+
   section {
     padding-top: 50px;
     padding-bottom: 50px;
