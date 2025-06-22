@@ -1,15 +1,3 @@
-.levels-title {
-    font-family: "Alfa Slab One", sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1.56;
-    text-transform: uppercase;
-    color: #fc0;
-    -webkit-text-stroke: 2px #c00f0c;
-    text-shadow: 1px 5px 10px #c00f0c;
-    margin-bottom: 20px;
-}
-
 .levels-descr {
     font-size: 16px;
     line-height: 1.87;
@@ -105,11 +93,7 @@
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
-    .levels-title {
-        font-size: 36px;
-        line-height: 1;
-        margin-bottom: 40px;
-    }
+
 
     .levels-descr {
         font-size: 20px;

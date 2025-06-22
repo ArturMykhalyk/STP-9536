@@ -56,7 +56,7 @@ section {
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
   .base-title {
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1;
     -webkit-text-stroke: 2px #c00f0c;
     margin-bottom: 40px;
