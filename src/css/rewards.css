@@ -1,32 +1,63 @@
 /* Styles for Mobile devices */
+.rewards-title{
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #fc0;
+    -webkit-text-stroke: 2px #c00f0c;
+    text-shadow: 1px 5px 10px #c00f0c;
+    margin-bottom: 20px;
+}
 
 .rewards-text{
-    margin-bottom: 13px;
+    margin-bottom: 14px;
     font-size: 16px;
-    line-height: 1.875;
+    line-height: 1.5;
 }
 
 .rewards-list{
     display: flex;
     flex-wrap: wrap;
-    row-gap: 15px;
+    row-gap: 16px;
     column-gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 
 }
 
-.rewards-item{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 138px;
-    height: 180px;
-    text-align: center;
-    border: 5px solid #32ADE6;
-    border-radius: 20px;
-    text-align: center;
-    align-items: center;
+.rewards-item {
+  width: 138px;
+  height: 180px;
+  border: 5px solid #32ADE6;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: space-between;
 }
+
+.rewards-item picture {
+  width: 100%;
+  height: 139px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.rewards-item picture img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  display: block;
+  max-width: none;
+  max-height: none;
+}
+
 
 .rewards-item-text{
     color: rgb(255, 204, 0);
@@ -34,17 +65,17 @@
     line-height: 1.75;
     text-align: left;
     text-shadow: inset 0px 1px 2px 0px #C00F0C;
-    padding: 0 12px 12px;
-}
-
-.rewards-item picture img {
-    width: auto;
-    object-fit: none;
-    display: block;
+    padding-left: 12px;
+    
 }
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
+.rewards-title{
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 1;
+}
 
 .rewards-text{
     font-size: 20px;
@@ -53,23 +84,27 @@
 }
 
 .rewards-list{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-.rewards-item{
-    width: 245px;
+.rewards-item {
+  width: 234px;
+  height: 297px;
 }
+
+.rewards-item picture {
+  width: 100%;
+  height: 245px;
+}
+
 
 .rewards-item-text{
     font-size: 32px;
     line-height: 1;
-    padding: 12px;
+    padding-bottom: 4px;
 }
 
-.rewards-text-botton{
+.rewards-text-bottom{
     line-height: 1;
 }
 }
