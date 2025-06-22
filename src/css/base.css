@@ -2,13 +2,14 @@ body {
   font-family: "Comic Neue", sans-serif;
   font-weight: 700;
   color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(225deg, #000 30.29%, #007aff 100%);
 
 }
 
 html {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: linear-gradient(135deg, #000 30.29%, #007aff 100%);
+
   scroll-behavior: smooth;
 }
 

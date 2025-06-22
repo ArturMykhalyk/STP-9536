@@ -13,16 +13,10 @@ section {
     padding: 10px 0;
 }
 
-.privacy-title {
-    font-family: "Alfa Slab One", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #fc0;
-    -webkit-text-stroke: 2px #c00f0c;
-    text-shadow: 1px 5px 10px #c00f0c;
-    margin-bottom: 40px;
+.underline {
+    text-decoration: underline;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .privacy-descr {
@@ -95,6 +89,13 @@ section {
     line-height: 1.5;
     color: #f7f5f5;
     margin-bottom: 15px;
+}
+
+.contact-us-priv .descr-list {
+    font-family: "Nunito", sans-serif;
+    line-height: 1.875;
+
+
 }
 
 .privacy-subtitle-sub-low {
@@ -204,7 +205,7 @@ section {
 
     .descr-list {
         font-size: 20px;
-        line-height: 1.2;
+        line-height: 1.5;
     }
 
 
