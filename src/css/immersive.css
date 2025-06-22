@@ -11,32 +11,30 @@
     margin-bottom: 20px;
 }
 
-.immersive-text{
-    margin-bottom: 15px;
+.immersive-text {
     font-size: 16px;
     line-height: 1.5;
+    margin-bottom: 15px;
 }
 
-.immersive-list{
+.immersive-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 15px;
 }
 
-.immersive-item{
-    width: 100%;
-    text-align: center;
+.immersive-item {
+    padding: 11px 15px;
     border: 5px solid #32ADE6;
-    border-radius: 20px;
-    padding: 16px 10px;
-    text-align: left;
+    border-radius: 10px;
 }
 
-.immersive-item-text{
+.immersive-item-text {
     font-size: 16px;
     line-height: 1.75;
 }
+
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
@@ -47,31 +45,34 @@
     line-height: 1;
 }
 
-.immersive-text{
+.immersive-text {
     font-size: 20px;
     line-height: 1.2;
-    margin-bottom: 13px;
+    margin-bottom: 0px;
 }
 
 .immersive-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 40px;
+    margin-bottom: 20px;
 }
 
 .immersive-item {
-  min-width: 325px;
-  height: 88px;
-  max-width: 518px;
-  flex: 1 1 auto;
+    display: flex;
+    max-height: 88px;
+    align-items: center;
+    padding-left: 11px;
+    padding-right: 11px;
+    max-width: 518px;
+    flex: 1 1 325px;
 }
 
 .immersive-item-text{
-    font-size: 20px;
-    line-height: 1.166667;
+    font-size: 24px;
+    line-height: 1.16;
 }
-.immersive-item-text-one{
-  max-width: 293px;
-}
-
 }
