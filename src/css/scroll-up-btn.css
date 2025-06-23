@@ -1,0 +1,41 @@
+.scroll-btn-icon {
+    transform: rotate(90deg);
+    fill: #000;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    bottom: 30px;
+    border: 3px solid #007aff;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 6px 2px #007aff;
+    }
+
+    &:focus {
+
+        background: #32ade6;
+    }
+
+    &:focus .scroll-btn-icon {
+        fill: #fff;
+    }
+}
+
+[ data-scroll-up-btn="close"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+[ data-scroll-up-btn="open"] {
+    opacity: 1;
+    transform: translateY(0);
+}
