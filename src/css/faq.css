@@ -70,6 +70,10 @@
     color: #ffffff;
 }
 
+.faq-item-desktop{
+    display: none;
+}
+
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
 
@@ -95,5 +99,9 @@
 .faq-button-global{
     margin-left: auto;
     margin-right: 0px;
+}
+
+.faq-item-desktop{
+    display: block;
 }
 }
