@@ -39,12 +39,14 @@
     z-index: -100;
     width: 0;
     height: 0;
+    pointer-events: none;
     transform: translateX(100%);
     opacity: 0;
 }
 
 [data-visible="open"] {
     transform: translateX(calc(-50% + 36px));
+    pointer-events: auto;
     opacity: 1;
 }
 
