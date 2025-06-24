@@ -75,14 +75,14 @@ listFaqEl.addEventListener('click', event => {
     const faqItem = moreBtn.closest('.faq-item');
     if (!faqItem) return;
 
-  // закриття попереднього FAQ
-    const openItem = listFaqEl.querySelector('.faq-item.faq-item-open')
-    if (openItem && openItem !== faqItem){
+    // закриття попереднього FAQ
+    const openItem = listFaqEl.querySelector('.faq-item.faq-item-open');
+    if (openItem && openItem !== faqItem) {
       const openedText = openItem.querySelector('.faq-text');
       const openedTitle = openItem.querySelector('.faq-title');
       const openedCloseBtn = openItem.querySelector('[data-faq-close]');
-      const openedMoreBtn = openItem.querySelector('[data-action-btn-more]')
-      
+      const openedMoreBtn = openItem.querySelector('[data-action-btn-more]');
+
       openedText.dataset.action = 'close';
       openedMoreBtn.dataset.actionBtnMore = 'open';
       openedCloseBtn.setAttribute('data-faq-close', 'close');
@@ -92,7 +92,7 @@ listFaqEl.addEventListener('click', event => {
       openedText.classList.remove('faq-text-open');
     }
 
-  // відкриття нового FAQ
+    // відкриття нового FAQ
     const faqText = faqItem.querySelector('.faq-text');
     const faqTitle = faqItem.querySelector('.faq-title');
     const closeBtnEl = faqItem.querySelector('[data-faq-close]');
@@ -178,9 +178,7 @@ function renderMainFaq(faqData) {
           <use href="${spriteUrl}#icon_close_btn"></use>
           </svg>
 
-          <svg class="track-link-youtube">
-            <use href="${spriteUrl}#icon-youtube"></use>
-          </svg>
+     
           
         </button>
         <p class="faq-title">${title}</p>
