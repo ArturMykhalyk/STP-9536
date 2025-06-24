@@ -11,11 +11,13 @@
     padding: 16px;
 }
 
-.faq-text {
+.faq-title {
     font-size: 16px;
     line-height: 1.75;
     margin-bottom: 5px;
 }
+
+.faq-text {}
 
 .faq-button {
     width: 150px;
@@ -86,10 +88,14 @@
     padding-bottom: 15px;
 }
 
-.faq-text {
+.faq-title {
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 8px;
+}
+
+.faq-text {
+    font-weight: 400px;
 }
 
 .faq-list {
