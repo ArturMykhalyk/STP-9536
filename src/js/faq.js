@@ -62,25 +62,68 @@ const modalOverlayEl = document.querySelector('.modal-overlay-faq');
 const modalListEl = document.querySelector('.modal-list');
 const listFaqEl = document.querySelector('[data-list="list"]');
 const listMainFaqEl = document.querySelector('.faq-list');
+const textFaqEl = document.querySelector('[data-action=""]');
 
 
+renderMainFaq(faqData);
 
+function renderMainFaq(faqData) {
+  const markup = faqData.map(({ faq, title, text }, index) => {
+    if (index >= 7) return '';
 
-renderMainFaq(faqData)
+    const addclass = index >= 5 ? 'faq-item-desktop' : '';
+    return `<li class="faq-item ${addclass}">
+          <button class="faq-btn-close" data-faq-close="close">
+          <svg class="faq-btn-close-icon" width="20" height="20">
+          <use href="../img/sprite.svg#icon_close_btn"></use>
+          </svg>
+        </button>
+        <p class="faq-title">${title}</p>
+        <p class="faq-text" data-action="close">${text}</p>
+        <button class="faq-button" type="button" data-faq="${faq}" data-action-btn-more="open">More</button>
+      </li>`;
+  }).join('');
+  listMainFaqEl.innerHTML = markup;
+}
+
 
 listFaqEl.addEventListener('click', event => {
-  const button = event.target.closest('[data-faq]');
-  if (!button) return;
+  const moreBtn = event.target.closest('[data-faq][data-action-btn-more]');
+  const closeBtn = event.target.closest('.faq-btn-close')
+  if (moreBtn) {
 
-  const faqID = Number(button.dataset.faq);
+    const faqItem = moreBtn.closest('.faq-item');
+    if (!faqItem) return;
 
-  const faqObject = faqData.find(item => {
-    return item.faq === faqID;
-  });
-  console.log(faqObject);
-  renderModalFaq([faqObject]);
-  openModalFaq();
+  const faqText = faqItem.querySelector('.faq-text');
+  const closeBtnEl = faqItem.querySelector('[data-faq-close]')
+
+
+  faqText.dataset.action = 'open';
+  moreBtn.dataset.actionBtnMore ='close';
+  closeBtnEl.setAttribute('data-faq-close', 'open');
+
+  return;
+  }
+
+  if(closeBtn){
+    const faqItem = closeBtn.closest('.faq-item')
+    if (!faqItem) return;
+
+    const faqText = faqItem.querySelector('.faq-text');
+    const closeBtnEl = faqItem.querySelector('[data-faq-close]')
+    const moreBtnEl = faqItem.querySelector('[data-action-btn-more]')
+
+    faqText.dataset.action = 'close';
+    moreBtnEl.dataset.actionBtnMore ='open';
+    closeBtnEl.setAttribute('data-faq-close', 'close');
+  }
+
 });
+
+// btmClose.addEventListener('click', event => {
+//   closeSinglfaq();
+// })
 
 btnOpenAllEl.addEventListener('click', event => {
   renderModalFaq(faqData);
@@ -90,6 +133,11 @@ btnOpenAllEl.addEventListener('click', event => {
 btnCloseAllEl.addEventListener('click', event => {
   closeModalFaq();
 });
+
+
+function closeSinglfaq(){
+
+};
 
 function openModalFaq() {
   modalOverlayEl.classList.add('is-open-modal-faq');
@@ -111,6 +159,7 @@ function handleEscKey(e) {
   }
 }
 
+
 function renderModalFaq(Data) {
   const markup = Data.map(({ title, text }) => {
     return `<li class="modal-item">
@@ -121,16 +170,4 @@ function renderModalFaq(Data) {
   modalListEl.innerHTML = markup;
 }
 
-function renderMainFaq(faqData) {
-  const markup = faqData.map(({ faq, title, text }, index) => {
-    if (index >= 7) return '';
 
-    const addclass = index >= 5 ? 'faq-item-desktop' : '';
-    return `<li class="faq-item ${addclass}">
-        <p class="faq-title">${title}</p>
-        <p class="faq-text">${text}</p>
-        <button class="faq-button" type="button" data-faq="${faq}">More</button>
-      </li>`;
-  }).join('');
-  listMainFaqEl.innerHTML = markup;
-}
