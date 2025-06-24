@@ -1,5 +1,5 @@
-const openBtnEl = document.querySelector('[data-action="open"]');
-const closeBtnEl = document.querySelector('[data-action="close"]');
+const openBtnEl = document.querySelector('[data-action-header="open"]');
+const closeBtnEl = document.querySelector('[data-action-header="close"]');
 const burgerMenuEl = document.querySelector('[data-visible]');
 
 openBtnEl.addEventListener('click', e => {
