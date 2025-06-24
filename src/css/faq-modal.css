@@ -72,9 +72,10 @@
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
 
+
 .modal-list {
     width: 1056px;
-    margin-bottom: 206px;
+    margin-bottom: 40px;
     margin-top: 100px;
 }
 
@@ -83,12 +84,8 @@
 }
 
 .modal-faq-all .faq-button-global {
-    position:absolute;
-    top: 3126px;
-    left: 908px;
     margin-top: 0;
-    margin-left: auto;
-    margin-right: 150px;
+    align-self: flex-end;
     margin-bottom: 96px;
 }
 

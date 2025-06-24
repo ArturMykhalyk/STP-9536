@@ -61,8 +61,12 @@ const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
 const modalOverlayEl = document.querySelector('.modal-overlay-faq');
 const modalListEl = document.querySelector('.modal-list');
 const listFaqEl = document.querySelector('[data-list="list"]');
+const listMainFaqEl = document.querySelector('.faq-list');
 
-console.log(listFaqEl);
+
+
+
+renderMainFaq(faqData)
 
 listFaqEl.addEventListener('click', event => {
   const button = event.target.closest('[data-faq]');
@@ -117,63 +121,16 @@ function renderModalFaq(Data) {
   modalListEl.innerHTML = markup;
 }
 
-// const listFaqEl = document.querySelector('[data-list="list"]');
-// const btnCloseFaqEl = document.querySelector('[data-faq="close"]');
-// const modalFaqOverlayEl = document.querySelector('.modal-overlay-faq');
-// const modalFaqEl = document.querySelector('.modal-faq-all');
-// const titleEl = document.querySelector('.modal-faq-title');
-// const textEl = document.querySelector('.modal-faq-text');
-// const learnMoreBtn = document.querySelector('[data-faq="all"]');
-// const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
+function renderMainFaq(faqData) {
+  const markup = faqData.map(({ faq, title, text }, index) => {
+    if (index >= 7) return '';
 
-// listFaqEl.addEventListener('click', handleFaqClick);
-// btnCloseFaqEl.addEventListener('click', closeModalFaq);
-// modalFaqOverlayEl.addEventListener('click', handleOverlayClick);
-// btnCloseAllEl.addEventListener('click', closeModalFaq);
-
-// function handleFaqClick(e){
-//   const button = e.target.closest('[data-faq]');
-//   if (!button) return;
-
-//   const faqID = Number(button.dataset.faq);
-//   let faqObject = {};
-
-//   faqObject = faqData.find(item =>{
-//     return item.faq === faqID
-//   })
-
-//   updateModalContent(faqObject)
-
-//   openModalFaq();
-// }
-
-// function updateModalContent(faqObject) {
-//   console.log(faqObject.title)
-//   titleEl.textContent = faqObject.title;
-//   textEl.textContent = faqObject.text;
-// }
-
-// function openModalFaq(){
-//   modalFaqOverlayEl.classList.add('is-open-modal-faq');
-//   document.documentElement.style.overflow = 'hidden';
-//   document.addEventListener('keydown', handleEscKey);
-// }
-
-// function closeModalFaq(){
-//   modalFaqOverlayEl.classList.remove('is-open-modal-faq');
-//   document.documentElement.style.overflow = '';
-//   document.removeEventListener('keydown', handleEscKey);
-//   document.removeEventListener('click', closeModalFaq);
-// }
-
-// function handleEscKey(e){
-//   if(e.key === 'Escape'){
-//     closeModalFaq();
-//   }
-// }
-
-// function handleOverlayClick(e){
-//   if(e.target === modalFaqOverlayEl){
-//     closeModalFaq();
-//   }
-// }
+    const addclass = index >= 5 ? 'faq-item-desktop' : '';
+    return `<li class="faq-item ${addclass}">
+        <p class="faq-title">${title}</p>
+        <p class="faq-text">${text}</p>
+        <button class="faq-button" type="button" data-faq="${faq}">More</button>
+      </li>`;
+  }).join('');
+  listMainFaqEl.innerHTML = markup;
+}
