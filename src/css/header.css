@@ -201,6 +201,10 @@
 
     }
 
+    [data-visible="close"] {
+        pointer-events: auto;
+    }
+
     .menu-list {
         display: flex;
         width: 932px;
