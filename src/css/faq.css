@@ -133,10 +133,7 @@
 }
 
 
-/* //!=================================================== */
-
 .faq-item-open{
-    background: linear-gradient(124.44deg, rgb(0, 0, 0) 56.47%,rgb(0, 122, 255) 105.937%);
     padding-top: 36px;   
 }
 
@@ -192,12 +189,6 @@
 .faq-item-desktop{
     display: block;
 }
-}
-
-
-
-.faq-item-open{
-    background: linear-gradient(124.44deg, rgb(0, 0, 0) 56.47%,rgb(0, 122, 255) 105.937%);
 }
 
 .faq-title-open {
