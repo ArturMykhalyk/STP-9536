@@ -13,7 +13,6 @@
     /* padding-top: 36px; */   
 }
 
-
 .faq-btn-close {
     position: absolute;
     top: 7px;
@@ -133,9 +132,26 @@
     display: flex;
 }
 
+
+/* //!=================================================== */
+
 .faq-item-open{
     background: linear-gradient(124.44deg, rgb(0, 0, 0) 56.47%,rgb(0, 122, 255) 105.937%);
+    padding-top: 36px;   
 }
+
+.faq-title-open {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.faq-text-open {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
@@ -177,3 +193,14 @@
     display: block;
 }
 }
+
+
+
+.faq-item-open{
+    background: linear-gradient(124.44deg, rgb(0, 0, 0) 56.47%,rgb(0, 122, 255) 105.937%);
+}
+
+.faq-title-open {
+    margin-bottom: 30px;
+}
+

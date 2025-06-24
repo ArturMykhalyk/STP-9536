@@ -56,6 +56,9 @@ const faqData = [
   },
 ];
 
+
+import spriteUrl from '/img/sprite.svg?url';
+
 const btnOpenAllEl = document.querySelector('[data-faq="open-all-faq"]');
 const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
 const modalOverlayEl = document.querySelector('.modal-overlay-faq');
@@ -76,11 +79,16 @@ listFaqEl.addEventListener('click', event => {
     if (!faqItem) return;
 
   const faqText = faqItem.querySelector('.faq-text');
+  const faqTitle = faqItem.querySelector('.faq-title');
   const closeBtnEl = faqItem.querySelector('[data-faq-close]')
 
   faqText.dataset.action = 'open';
   moreBtn.dataset.actionBtnMore ='close';
   closeBtnEl.setAttribute('data-faq-close', 'open');
+
+  faqItem.classList.add('faq-item-open');
+  faqTitle.classList.add('faq-title-open');
+  faqText.classList.add('faq-text-open');
 
   return;
   }
@@ -90,14 +98,18 @@ listFaqEl.addEventListener('click', event => {
     if (!faqItem) return;
 
     const faqText = faqItem.querySelector('.faq-text');
+    const faqTitle = faqItem.querySelector('.faq-title');
     const closeBtnEl = faqItem.querySelector('[data-faq-close]')
     const moreBtnEl = faqItem.querySelector('[data-action-btn-more]')
 
     faqText.dataset.action = 'close';
     moreBtnEl.dataset.actionBtnMore ='open';
     closeBtnEl.setAttribute('data-faq-close', 'close');
-  }
 
+    faqItem.classList.remove('faq-item-open');
+    faqTitle.classList.remove('faq-title-open');
+    faqText.classList.remove('faq-text-open');
+  }
 });
 
 btnOpenAllEl.addEventListener('click', event => {
@@ -147,7 +159,7 @@ function renderMainFaq(faqData) {
     return `<li class="faq-item ${addclass}">
           <button class="faq-btn-close" data-faq-close="close">
           <svg class="faq-btn-close-icon" width="20" height="20">
-          <use href="/img/sprite.svg#icon_close_btn"></use>
+          <use href="${spriteUrl}#icon_close_btn"></use>
           </svg>
         </button>
         <p class="faq-title">${title}</p>
