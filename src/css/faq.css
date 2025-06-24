@@ -15,7 +15,7 @@
 
 .faq-btn-close {
     position: absolute;
-    top: 7px;
+    top: -50px;
     left: 247px;
     border: none;
     border-radius: 0;
@@ -163,7 +163,7 @@
 }
 
 .faq-btn-close {
-    top: 15px;
+    top: -50px;
     left: 1009px;
 }
 
