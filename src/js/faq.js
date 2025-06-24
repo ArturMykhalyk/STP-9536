@@ -56,8 +56,7 @@ const faqData = [
   },
 ];
 
-
-import spriteUrl from '/img/sprite.svg?url';
+import spriteUrl from './img/sprite.svg?url';
 
 const btnOpenAllEl = document.querySelector('[data-faq="open-all-faq"]');
 const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
@@ -67,43 +66,41 @@ const listFaqEl = document.querySelector('[data-list="list"]');
 const listMainFaqEl = document.querySelector('.faq-list');
 const textFaqEl = document.querySelector('[data-action=""]');
 
-
 renderMainFaq(faqData);
 
 listFaqEl.addEventListener('click', event => {
   const moreBtn = event.target.closest('[data-faq][data-action-btn-more]');
-  const closeBtn = event.target.closest('.faq-btn-close')
+  const closeBtn = event.target.closest('.faq-btn-close');
   if (moreBtn) {
-
     const faqItem = moreBtn.closest('.faq-item');
-    if (!faqItem) return;
-
-  const faqText = faqItem.querySelector('.faq-text');
-  const faqTitle = faqItem.querySelector('.faq-title');
-  const closeBtnEl = faqItem.querySelector('[data-faq-close]')
-
-  faqText.dataset.action = 'open';
-  moreBtn.dataset.actionBtnMore ='close';
-  closeBtnEl.setAttribute('data-faq-close', 'open');
-
-  faqItem.classList.add('faq-item-open');
-  faqTitle.classList.add('faq-title-open');
-  faqText.classList.add('faq-text-open');
-
-  return;
-  }
-
-  if(closeBtn){
-    const faqItem = closeBtn.closest('.faq-item')
     if (!faqItem) return;
 
     const faqText = faqItem.querySelector('.faq-text');
     const faqTitle = faqItem.querySelector('.faq-title');
-    const closeBtnEl = faqItem.querySelector('[data-faq-close]')
-    const moreBtnEl = faqItem.querySelector('[data-action-btn-more]')
+    const closeBtnEl = faqItem.querySelector('[data-faq-close]');
+
+    faqText.dataset.action = 'open';
+    moreBtn.dataset.actionBtnMore = 'close';
+    closeBtnEl.setAttribute('data-faq-close', 'open');
+
+    faqItem.classList.add('faq-item-open');
+    faqTitle.classList.add('faq-title-open');
+    faqText.classList.add('faq-text-open');
+
+    return;
+  }
+
+  if (closeBtn) {
+    const faqItem = closeBtn.closest('.faq-item');
+    if (!faqItem) return;
+
+    const faqText = faqItem.querySelector('.faq-text');
+    const faqTitle = faqItem.querySelector('.faq-title');
+    const closeBtnEl = faqItem.querySelector('[data-faq-close]');
+    const moreBtnEl = faqItem.querySelector('[data-action-btn-more]');
 
     faqText.dataset.action = 'close';
-    moreBtnEl.dataset.actionBtnMore ='open';
+    moreBtnEl.dataset.actionBtnMore = 'open';
     closeBtnEl.setAttribute('data-faq-close', 'close');
 
     faqItem.classList.remove('faq-item-open');
@@ -152,20 +149,27 @@ function renderModalFaq(Data) {
 }
 
 function renderMainFaq(faqData) {
-  const markup = faqData.map(({ faq, title, text }, index) => {
-    if (index >= 7) return '';
+  const markup = faqData
+    .map(({ faq, title, text }, index) => {
+      if (index >= 7) return '';
 
-    const addclass = index >= 5 ? 'faq-item-desktop' : '';
-    return `<li class="faq-item ${addclass}">
+      const addclass = index >= 5 ? 'faq-item-desktop' : '';
+      return `<li class="faq-item ${addclass}">
           <button class="faq-btn-close" data-faq-close="close">
           <svg class="faq-btn-close-icon" width="20" height="20">
           <use href="${spriteUrl}#icon_close_btn"></use>
           </svg>
+
+          <svg class="track-link-youtube">
+            <use href="${spriteUrl}#icon-youtube"></use>
+          </svg>
+          
         </button>
         <p class="faq-title">${title}</p>
         <p class="faq-text" data-action="close">${text}</p>
         <button class="faq-button" type="button" data-faq="${faq}" data-action-btn-more="open">More</button>
       </li>`;
-  }).join('');
+    })
+    .join('');
   listMainFaqEl.innerHTML = markup;
 }
