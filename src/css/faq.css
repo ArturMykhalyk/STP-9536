@@ -146,6 +146,7 @@
 .faq-text-open {
     font-size: 20px;
     line-height: 1.4;
+    font-weight: 400;
 }
 
 
@@ -189,8 +190,14 @@
     .faq-item-desktop {
         display: block;
     }
-}
 
-.faq-title-open {
+    .faq-title-open {
     margin-bottom: 30px;
 }
+
+.faq-text-open {
+    font-weight: 700;
+    
+}
+}
+
