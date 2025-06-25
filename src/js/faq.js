@@ -56,7 +56,7 @@ const faqData = [
   },
 ];
 
-import spriteUrl from '/img/sprite.svg?url';
+import spriteUrl from '../img/sprite.svg?url';
 
 const btnOpenAllEl = document.querySelector('[data-faq="open-all-faq"]');
 const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
