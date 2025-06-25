@@ -10,7 +10,7 @@ export default defineConfig(({ command }) => {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
-    base: '/STP-9536/',
+
     root: 'src',
     build: {
       sourcemap: true,
@@ -46,7 +46,7 @@ export default defineConfig(({ command }) => {
         sort: 'mobile-first',
       }),
       ViteImageOptimizer({
-        exclude: [/sprite\.svg$/],
+        exclude: [/img\/sprite\.svg$/],
         png: {
           quality: 60,
         },
