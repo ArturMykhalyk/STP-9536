@@ -1,4 +1,4 @@
-const wrapper = document.querySelector('.stone-wrapper');
+const wrapper = document.querySelector('[data-stone-wrapper="animation"]');
 let step = 0;
 
 function animateStones() {

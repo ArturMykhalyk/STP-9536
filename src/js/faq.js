@@ -11,6 +11,7 @@ listFaqEl.addEventListener('click', event => {
     const faqItem = moreBtn.closest('[data-faq-item]');
     if (!faqItem) return;
 
+
     const openItem = listFaqEl.querySelector('[data-faq-item][data-faq-state="open"]');
     if (openItem && openItem !== faqItem) {
       const openedText = openItem.querySelector('[data-faq-text]');
