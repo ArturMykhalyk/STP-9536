@@ -1,10 +1,7 @@
-
-
 const btnOpenAllEl = document.querySelector('[data-faq="open-all-faq"]');
 const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
 const modalOverlayEl = document.querySelector('.modal-overlay-faq');
 const listFaqEl = document.querySelector('[data-list="list"]');
-
 
 listFaqEl.addEventListener('click', event => {
   const moreBtn = event.target.closest('[data-faq][data-action-btn-more]');
@@ -13,7 +10,7 @@ listFaqEl.addEventListener('click', event => {
     const faqItem = moreBtn.closest('.faq-item');
     if (!faqItem) return;
 
-      // закриття попереднього FAQ
+    // закриття попереднього FAQ
     const openItem = listFaqEl.querySelector('.faq-item.faq-item-open');
     if (openItem && openItem !== faqItem) {
       const openedText = openItem.querySelector('.faq-text');
@@ -46,12 +43,13 @@ listFaqEl.addEventListener('click', event => {
     // скролл на поточний FAQ для мобілки
     if (window.innerWidth < 1200) {
       const rect = faqItem.getBoundingClientRect();
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
       const offset = rect.top + scrollTop - 50;
 
       window.scrollTo({
-      top: offset,
-      behavior: 'smooth'
+        top: offset,
+        behavior: 'smooth',
       });
     }
     return;
@@ -101,4 +99,3 @@ function handleEscKey(e) {
     closeModalFaq();
   }
 }
-
