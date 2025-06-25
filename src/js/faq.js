@@ -1,3 +1,5 @@
+
+
 const btnOpenAllEl = document.querySelector('[data-faq="open-all-faq"]');
 const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
 const modalOverlayEl = document.querySelector('.modal-overlay-faq');
