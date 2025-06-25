@@ -1,80 +1,64 @@
-
-
 const btnOpenAllEl = document.querySelector('[data-faq="open-all-faq"]');
 const btnCloseAllEl = document.querySelector('[data-faq="close-all-faq"]');
-const modalOverlayEl = document.querySelector('.modal-overlay-faq');
+const modalOverlayEl = document.querySelector('[data-modal="faq-overlay"]');
 const listFaqEl = document.querySelector('[data-list="list"]');
 
-
 listFaqEl.addEventListener('click', event => {
-  const moreBtn = event.target.closest('[data-faq][data-action-btn-more]');
-  const closeBtn = event.target.closest('.faq-btn-close');
+  const moreBtn = event.target.closest('[data-faq-btn="more"][data-action-btn-more]');
+  const closeBtn = event.target.closest('[data-faq-close]');
+
   if (moreBtn) {
-    const faqItem = moreBtn.closest('.faq-item');
+    const faqItem = moreBtn.closest('[data-faq-item]');
     if (!faqItem) return;
 
-      // закриття попереднього FAQ
-    const openItem = listFaqEl.querySelector('.faq-item.faq-item-open');
+    const openItem = listFaqEl.querySelector('[data-faq-item][data-faq-state="open"]');
     if (openItem && openItem !== faqItem) {
-      const openedText = openItem.querySelector('.faq-text');
-      const openedTitle = openItem.querySelector('.faq-title');
+      const openedText = openItem.querySelector('[data-faq-text]');
+      const openedTitle = openItem.querySelector('[data-faq-title]');
       const openedCloseBtn = openItem.querySelector('[data-faq-close]');
-      const openedMoreBtn = openItem.querySelector('[data-action-btn-more]');
+      const openedMoreBtn = openItem.querySelector('[data-faq-btn="more"]');
 
-      openedText.dataset.action = 'close';
-      openedMoreBtn.dataset.actionBtnMore = 'open';
+      openedText.setAttribute('data-action', 'close');
+      openedMoreBtn.setAttribute('data-action-btn-more', 'open');
       openedCloseBtn.setAttribute('data-faq-close', 'close');
-
-      openItem.classList.remove('faq-item-open');
-      openedTitle.classList.remove('faq-title-open');
-      openedText.classList.remove('faq-text-open');
+      openItem.setAttribute('data-faq-state', 'closed');
     }
 
-    // відкриття нового FAQ
-    const faqText = faqItem.querySelector('.faq-text');
-    const faqTitle = faqItem.querySelector('.faq-title');
+    const faqText = faqItem.querySelector('[data-faq-text]');
+    const faqTitle = faqItem.querySelector('[data-faq-title]');
     const closeBtnEl = faqItem.querySelector('[data-faq-close]');
 
-    faqText.dataset.action = 'open';
-    moreBtn.dataset.actionBtnMore = 'close';
+    faqText.setAttribute('data-action', 'open');
+    moreBtn.setAttribute('data-action-btn-more', 'close');
     closeBtnEl.setAttribute('data-faq-close', 'open');
+    faqItem.setAttribute('data-faq-state', 'open');
 
-    faqItem.classList.add('faq-item-open');
-    faqTitle.classList.add('faq-title-open');
-    faqText.classList.add('faq-text-open');
-
-    // скролл на поточний FAQ для мобілки
     if (window.innerWidth < 1200) {
       const rect = faqItem.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const offset = rect.top + scrollTop - 50;
+      const offset = rect.top + scrollTop - (window.innerHeight / 2) + (rect.height / 2);
 
-      window.scrollTo({
-      top: offset,
-      behavior: 'smooth'
-      });
+      window.scrollTo({ top: offset, behavior: 'smooth' });
     }
     return;
   }
-  // закриття поточного FAQ
+
   if (closeBtn) {
-    const faqItem = closeBtn.closest('.faq-item');
+    const faqItem = closeBtn.closest('[data-faq-item]');
     if (!faqItem) return;
 
-    const faqText = faqItem.querySelector('.faq-text');
-    const faqTitle = faqItem.querySelector('.faq-title');
+    const faqText = faqItem.querySelector('[data-faq-text]');
+    const faqTitle = faqItem.querySelector('[data-faq-title]');
     const closeBtnEl = faqItem.querySelector('[data-faq-close]');
-    const moreBtnEl = faqItem.querySelector('[data-action-btn-more]');
+    const moreBtnEl = faqItem.querySelector('[data-faq-btn="more"]');
 
-    faqText.dataset.action = 'close';
-    moreBtnEl.dataset.actionBtnMore = 'open';
+    faqText.setAttribute('data-action', 'close');
+    moreBtnEl.setAttribute('data-action-btn-more', 'open');
     closeBtnEl.setAttribute('data-faq-close', 'close');
-
-    faqItem.classList.remove('faq-item-open');
-    faqTitle.classList.remove('faq-title-open');
-    faqText.classList.remove('faq-text-open');
+    faqItem.setAttribute('data-faq-state', 'closed');
   }
 });
+
 
 btnOpenAllEl.addEventListener('click', event => {
   openModalFaq();
@@ -101,4 +85,3 @@ function handleEscKey(e) {
     closeModalFaq();
   }
 }
-
