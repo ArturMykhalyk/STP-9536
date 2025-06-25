@@ -34,12 +34,15 @@ listFaqEl.addEventListener('click', event => {
     faqItem.setAttribute('data-faq-state', 'open');
 
     if (window.innerWidth < 1200) {
-      const rect = faqItem.getBoundingClientRect();
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const offset = rect.top + scrollTop - (window.innerHeight / 2) + (rect.height / 2);
+  const rect = faqItem.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const offset = rect.top + scrollTop - 50;
 
-      window.scrollTo({ top: offset, behavior: 'smooth' });
-    }
+  window.scrollTo({
+    top: offset,
+    behavior: 'smooth'
+  });
+}
     return;
   }
 
